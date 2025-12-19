@@ -10,6 +10,7 @@
 - Red team procedures, with self-made scripts for these.
 - Python Scripting
 - Understanding how packets work and travel
+- Implement red/blue team explanations to current documents (Networking)
 
 ## Long term goals...
 - Learn enough to create bash scripts, then learn Python scripting
