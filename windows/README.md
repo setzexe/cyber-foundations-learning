@@ -1,4 +1,3 @@
 # Windows Basics & Commands
 
-Windows remains a vital part of everyday technology, as well as enterprise level endpoints.
-Understanding the Windows system & syntax can make navigating and threat analysis / creation much more accessible
+Windows is a proprietary (Microsoft) operating system built on the Windows NT kernal. Being the most used operating system, used from enterprise environments to personal computers, it is highly susceptible to attacks. Understanding Windows inner workings is crucial for defense, detection, etc.

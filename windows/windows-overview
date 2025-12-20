@@ -1,0 +1,29 @@
+# Windows Overview
+
+Windows is built on the NT kernal, which seperates system operations into user mode and kernal mode for security. Most corporate endpoints run Windows, making it a primary attack surface.
+
+Blue teaming monitoring and logging depends heavily on Windows internals.
+
+## Windows Editions
+
+Windows has multiple editions.
+- Home: Consumer use. Most personal computers use this.
+- Pro: Allows BitLocker encryption + advanced management
+- Enterprise: Large corporations with centralized security controls
+- Server: Hosts services, domain control, infrastructure
+
+Different editions = Different attack surfaces. **Enterprise and Server** are high-value targets.
+
+## Kernal Mode
+
+The kernal mode allows full system access, while the user mode applies restricted access to important components.
+
+In a cybersecurity context, a malware that manages to escalate permissions from user --> kernal means full system compromise. It can do whatever it wants to the system.
+
+## GUI-Centric Design
+
+A primary reason to why Windows appeals to it's large audience is the fact that it relies heavily on a **Graphical User Interface (GUI)**. The desktop is graphical, the start menu is graphical, the basic features are understandable. 
+
+This can also be seen as a negative from a defense standpoint. Users are conditioned to trust prompts and graphics. If they click a misleading one, that can do terrible damage. Many attacks happen this way, with malware pretending to be legitimate services. 
+
+

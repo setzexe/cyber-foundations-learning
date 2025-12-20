@@ -2,13 +2,17 @@
 
 ## Currenly learning...
 - Linux System & Commands
-- Bash Scripting
+    - Filesystem
+    - Packages
+- Windows
+    - Registry
+    - Users, Groups, and UACs
 - Networking Fundamentals
-- Ports
+    - Ports
+- Bash Scripting
 
 ## Next areas of focus...
-- Red team procedures, with self-made scripts for these.
-- Python Scripting
+- Introduction to Red Team tools via bash scripting
 - Understanding how packets work and travel
 - Implement red/blue team explanations to current documents (Networking)
 
