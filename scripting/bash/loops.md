@@ -108,5 +108,3 @@ for i in 1 2 3; do
 done
 
 "# No output. Continue goes to the next iteration before echo."
-
-# Mini Tasks
