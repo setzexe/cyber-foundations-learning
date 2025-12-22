@@ -1,0 +1,165 @@
+# Bash Basics
+
+Like most programming languages in general, Bash is not very complicated. It simply requires knowing the basics and fundamentals, which are used to create such scripts. Variables, arguments, operators, etc. 
+
+## How to create and edit a script
+
+We use nano for editing scripts. Scripts end with .sh, as opposed to regular .txt files. In the terminal, we can create an example script called exampleScript. We put:
+
+- nano exampleScript.sh
+
+This accesses the nano text editor. To make this a proper bash script so the terminal understands what type of script this is, we put this at the very top, at the first line:
+
+- #!/bin/bash
+
+Once we have our script created, the usual sequence to save and exit is Ctrl + O --> Enter --> Ctrl + X.
+
+As stated in the permissions markdown, files have permission rules in order to be executed, read, or written to. Bash scripts are NOT automatically executable. In order to make them executable, you can do one of two commands:
+
+- chmod +x exampleScript.sh # This just allows executable permissions.
+- chmod 755 exampleScript.sh # This gives more detailed numeric permissions. It can be other codes like 700 or 744, granted that your permissions allow for execution.
+
+Once permissions are set, you can run the script by:
+
+- ./exampleScript.sh
+
+## Variables
+
+Variables store data for reuse. They can store arguments as well.
+
+name="target"
+echo "$name" 
+
+Echo is bash's way of outputting information. The code above would simply output "target". Variables are great for storing information like IPs or ports. 
+
+DOMAIN=$1
+
+If a script was executed with an argument (more in the next section), DOMAIN becomes whatever that argument was.
+
+Not a variable, but putting # before a message creates a comment.
+
+"# Inside a bash script, this would be seen as a comment."
+
+## Positional Arguments
+
+Arguments allow scripts to accept user input.
+
+echo "Target is $1" 
+
+In the terminal, you type:
+
+./script.sh 192.168.1.10
+
+"Target is 192.168.1.10" is outputted.
+
+If there's multiple arguments, you go up from 1 "(S2, S3)".
+S@ uses all arguments. S# gives back the number of argument.
+If you want to access/verify the last argument, S? is the command.
+
+Similar to above, you can also store **command output** in variables.
+
+result=S(whoami)
+echo $result
+
+(In the text above, S's should be $'s. Having them in the markdown messed up formatting.)
+## Arrays
+
+Arrays store multiple values.
+
+ports=(22 80 443)
+
+echo ${ports[0]}
+
+The output would be 22.
+
+If you wanted to list all the contents of the array + get the size, an example script would look like:
+
+FRUITS=("APPLES" "ORANGES" "GRAPES")
+
+FRUITS_SIZE=${#FRUITS[@]}
+
+for fruit in "${ITEMS[@]}"; do
+
+--> echo "$fruit"
+
+done
+
+echo $FRUITS_SIZE
+
+## Tests
+
+You would utilize these as script conditions. They are essentials for "if" statements.
+
+### String Tests
+
+-z "$var" # Checks if the variable is empty
+
+-n "$var" # Checks if its not empty.
+
+if [ -z "$1" ]; then
+
+--> echo "No argument provided"
+
+fi
+
+This echoes the output if user input was empty.
+
+### File Tests
+
+-f file # Checks if the file exists and is a regular file.
+
+-d dir # Same concept, but a folder/directory.
+
+-e path # Verifies if the path exists
+
+if [ -f user_data.txt ]; then
+
+--> echo "User file exists"
+
+fi
+
+This echoes the output only if user_data.txt exists on the system.
+
+### Numeric Tests
+
+-eq # equals
+
+-ne # not equal
+
+-gt # greater than
+
+-lt # less than
+
+if [ "$count" -gt 5]; then 
+
+--> echo "Count limit exceeded"
+
+fi
+
+This echoes the output only if $count is greater than 5.
+
+## Exit Codes
+
+Every command returns an exit code.
+
+- 0 = success
+- Non-zero = failure
+
+For example, say we wanted to verify if last argument.
+
+ping -c 1 8.8.8.8
+
+if [ $? -ne 0 ]; then
+
+--> echo "Host unreachable"
+
+fi
+
+If the ping did not work, we won't get a 0 error code, meaning the command did not work.
+
+
+
+
+
+
+
