@@ -5,11 +5,17 @@
     - Filesystem
     - Packages
 - Windows
-    - Registry
-    - Users, Groups, and UACs
+    - Command Line
+    - Processes / Services
 - Networking Fundamentals
     - Ports
 - Bash Scripting
+    - Loops
+    - Conditions
+    - Arguments
+    - Mini-tools 
+- Web
+    - HTTP
 
 ## Next areas of focus...
 - Introduction to Red Team tools via bash scripting
