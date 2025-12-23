@@ -9,13 +9,16 @@
     - Processes / Services
 - Networking Fundamentals
     - Ports
+    - Packets
 - Bash Scripting
-    - Loops
     - Conditions
     - Arguments
     - Mini-tools 
+    - Recon tool process
 - Web
     - HTTP
+    - Frontend
+        - HTML Basics & Understanding
 
 ## Next areas of focus...
 - Introduction to Red Team tools via bash scripting

@@ -99,7 +99,7 @@ done
 
 Skips the current iteration.
 
-for i in 1 2 3; do
+for i in {1..10}; do # The {1..10} portion does 1 through 10.
 
 --> continue
 
