@@ -56,6 +56,8 @@ If there's multiple arguments, you go up from 1 "(S2, S3)".
 S@ uses all arguments. S# gives back the number of argument.
 If you want to access/verify the last argument, S? is the command.
 
+S0 would give you the script you are running. If you put ./myscript.sh in the terminal, S0 would be ./myscript.sh
+
 Similar to above, you can also store **command output** in variables.
 
 result=S(whoami)

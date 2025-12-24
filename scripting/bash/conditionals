@@ -92,7 +92,7 @@ if [ $? eq 0 ]; then
 fi
 
 Extra Note: 
-**> /dev/null is a widely used concept in scripting.** As learned, > redirects output somewhere else. If you ping someone, you usually get an output message showing your success. If you redirect the output message to the special file /dev/null, you won't see the output. That is because this file exists purely as a "black hole" for input. It accepts any input and just discards it immediately.
+**> /dev/null is a widely used concept in scripting.** As learned, > redirects output somewhere else. If you ping someone, you usually get an output message showing your success. If you redirect the output message to the special file /dev/null, you won't see the output. That is because this file exists purely as a "black hole" for input. It accepts any input and just discards it immediately. You may also get error messages in your outputs. /dev/null only handles regular output. To handle both regular AND error output, the correct conept is **/dev/null 2>&1**
 
 ## Early Exit
 
