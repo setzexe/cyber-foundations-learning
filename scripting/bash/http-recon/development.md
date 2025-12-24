@@ -1,4 +1,4 @@
-# Development
+# Development & Notes
 
 ## 1.0 
 
