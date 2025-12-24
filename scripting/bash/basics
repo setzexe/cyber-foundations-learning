@@ -112,6 +112,8 @@ This echoes the output if user input was empty.
 
 -e path # Verifies if the path exists
 
+-s file # Checks if a file exists and has data (not empty)
+
 if [ -f user_data.txt ]; then
 
 --> echo "User file exists"

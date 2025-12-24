@@ -1,0 +1,112 @@
+# Bash Conditionals
+
+Conditionals allow scripts to make decisions based on input, system state, or command results. In a cybersecurity context, these are used for error handling, validation, safe automation, etc.
+
+## if statements
+
+Run code only if a condition is true. Start with if, end with fi.
+
+if [ -f targets.txt ]; then
+
+--> echo "Targets file exists"
+
+fi
+
+If the targets.txt file exists, echo the output. It will not echo the text if it does not exist.
+
+This is used often for input validation and file/safety checks.
+
+## if / else / elif
+
+If / else alone handles true or false input. If the argument matches the condition, it does what's in the if branch. If not, it goes to the else branch. If the argument can take multiple options, we can add elif ("else if"). 
+
+if [ -z "$1" ]; then
+
+--> echo "No target provided"
+
+elif [ "$1" == "error" ]; then
+
+--> echo "$1"
+
+else
+
+--> echo "Target: $1"
+
+fi
+
+## case
+
+Case is a multi-branch conditional designed. One value gets matched against many possible patterns. These are very similar to if / elif / else chains, albiet much less messy. 
+
+### General structure:
+
+case VALUE in # What you're checking. Usually $1
+
+--> PATTERN1) commands ;; # What you're checking VALUE to be. If it's that, go here.
+
+--> PATTERN2) commands ;; # Commands is what you want to do based on Value.
+
+--> *) default ;; # Default case, in case none of the cases match
+
+esac # Ends the case. This is just case backwards
+
+### Example:
+
+case "$1" in
+
+--> start) echo "Starting" ;;
+
+--> stop) echo "Stopping" ;;
+
+--> status) echo "Status" ;;
+
+--> *) echo "Invalid Option" ;;
+
+esac
+
+## Combining Conditions
+
+Bash allows for logical operators. They are the same one's you'd see in C++.
+
+- && = AND
+- || = OR
+
+if [ -f "$1" ] && [ -s "$1" ]; then
+
+--> echo "$1 is a valid file"
+
+fi
+
+If the inputted file exists AND has data, it is a valid file.
+
+## Exit Codes in Conditions
+
+You can use exit codes to detect if commands went through.
+
+ping -c 1 8.8.8.8 > /dev/null
+
+if [ $? eq 0 ]; then
+
+--> echo "Target reached"
+
+fi
+
+Extra Note: 
+**> /dev/null is a widely used concept in scripting.** As learned, > redirects output somewhere else. If you ping someone, you usually get an output message showing your success. If you redirect the output message to the special file /dev/null, you won't see the output. That is because this file exists purely as a "black hole" for input. It accepts any input and just discards it immediately.
+
+## Early Exit
+
+Stop script execution safely.
+
+if [ -z "$1" ]; then
+
+--> echo "Input not received."
+
+--> exit 1
+
+fi
+
+If the first argument is empty (-z = empty argument), echo and exit (1).
+
+
+

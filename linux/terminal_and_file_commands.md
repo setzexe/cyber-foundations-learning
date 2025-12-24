@@ -25,8 +25,8 @@ To open to terminal in Linux, the short cut is **Ctrl + Alt + T**.
 - && -- Run command only if the previous command succeeds.
     - ping -c 2 10.10.10.10 && echo "Ping success!"
 
-- ">" -- Overwrite File. 
-    - echo "Hello" > file.txt
+- ">" -- Redirects output to somewhere else. 
+    - echo "Hello" > file.txt 
 
 - ">>" -- Append to File.
     - echo "New Line" >> file.txt
