@@ -11,9 +11,6 @@
     - Ports
     - Packets
 - Bash Scripting
-    - Conditions
-    - Arguments
-    - Mini-tools 
     - Recon tool process
 - Web
     - HTTP
