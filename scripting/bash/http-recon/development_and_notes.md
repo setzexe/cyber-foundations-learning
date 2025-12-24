@@ -1,6 +1,6 @@
 # Development & Notes
 
-## 1.0 
+## Version 1.0 
 
 The execution flow of the tool should flow out simply like this:
 
@@ -20,4 +20,6 @@ We must check reachability before we actually grab the HTTP headers. To do this,
 - Ping *might* not work depending on the environment. As I work on this via hotel wifi, ICMP packets are blocked. This allows sites to still be accessible, but not reachable via ICMP. This would be fine for home wifi's, but many private networks might catch a similar issue. For this reason, we will not exit the script if ping doesn't work. Rather, we'll just echo that ICMP might be blocked.
 
 Once that is settled, we use *curl* to access the headers of the target. *curl* is very common is cyber. For now, only accessing the headers is fine. These headers can reveal server software, frameworks, proxies, and misconfigurations.
+
+
 
