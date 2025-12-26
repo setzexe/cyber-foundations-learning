@@ -13,7 +13,6 @@
 - Bash Scripting
     - Recon tool process
 - Web
-    - HTTP
     - Frontend
         - HTML Basics & Understanding
 
