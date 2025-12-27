@@ -8,8 +8,6 @@
     - Command Line
     - Processes / Services
 - Networking Fundamentals
-    - Ports
-    - Packets
     - Traffic Flow Markdown
 - Bash Scripting
     - Recon tool process
