@@ -8,7 +8,7 @@
     - Command Line
     - Processes / Services
 - Networking Fundamentals
-    - Traffic Flow Markdown
+    - Phase 1 Complete
 - Bash Scripting
     - Recon tool process
 - Web
