@@ -5,8 +5,7 @@
     - Filesystem
     - Packages
 - Windows
-    - Command Line
-    - Processes / Services
+    - Phase 1 Complete 
 - Networking Fundamentals
     - Phase 1 Complete
 - Bash Scripting
@@ -25,15 +24,9 @@
     - JS, HTML, and CSS (Just the basics for CSS)
 - Databases
     - SQL
-- Windows
+- Windows 
     - Command Line (beyond the introduction)
-        - Commands & Navigation
-        - Automation
-        - Exploit Techniques
-        - Bypass Methods
-    - PowerShell
-        - Scripting
-        - Automation
+        - PowerShell
 - Scripting
     - Python
     - More Bash (Maybe Python) Tools
@@ -50,7 +43,6 @@
     - Hardening
     - Incident Response
     
-
 ## Long term goals...
 - Learn enough to create bash scripts, then learn Python scripting
 - Successfully understand pentesting and other red-team works
