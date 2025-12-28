@@ -2,7 +2,6 @@
 
 ## Currenly learning...
 - Linux System & Commands
-    - Filesystem
     - Packages
 - Windows
     - Phase 1 Complete 
