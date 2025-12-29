@@ -51,7 +51,7 @@ These are very common ports you will experience and work with.
 
 Open ports expose services and expand attack surface since they reveal running applications. Closed / filtered ports have way less exposure and are practically non-existent (very few exceptions) to hackers. So hackers have to map out and rely on these open ports.
 
-Security often begins by controlling which ports are open. If you don't ned a port, do not open it. If you do, set proper precautions like firewalls. 
+Security often begins by controlling which ports are open. If you don't need a port, do not open it. If you do, set proper precautions like firewalls. 
 
 ## Ports & Cybersecurity
 

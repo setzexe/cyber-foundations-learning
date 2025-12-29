@@ -29,7 +29,7 @@ Packets can be delayed, lost, or arrive out of order. Protocols handle this by r
 
 ## Packets and Security
 
-Packets expose where data is going, how much data is being sent, and patterns in packet sending. With encryption, contents are hidden. The metadata, however, still exists. Packet behavior can indicate malicious
+Packets expose where data is going, how much data is being sent, and patterns in packet sending. With encryption, contents are hidden. The metadata, however, still exists.
 
 Understanding packets helps reasoning about traffic flow, how attacks traverse networks, etc. Packets are the physical reality behind all network communication.
 

@@ -6,7 +6,7 @@ DNS (Domain Name System) is the system that translates human readable domain nam
 
 ## What DNS Does
 
-Let's have a link like google.com. DNS would map that to 10.10.10.10. Browsers now know where to locate, and the computer now knows where data is being sent. DNS itself doesn't transfer data, it just locates.
+Let's have a link like google.com. DNS would map that to 8.8.8.8. Browsers now know where to locate, and the computer now knows where data is being sent. DNS itself doesn't transfer data, it just locates.
 
 ## DNS Hierarchy
 Resolution flows through multiple layers:

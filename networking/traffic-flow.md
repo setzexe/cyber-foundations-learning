@@ -9,7 +9,7 @@ When a client communicates with a server, traffic follows this path:
 - Packets arrive at the IP address
 - A port determines the destination source
 - A process receives the data
-- The application pricesses the request
+- The application processes the request
 - A response is generated and sent back.
 
 The user sees this extremely fast as one action.
