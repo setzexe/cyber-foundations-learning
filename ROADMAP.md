@@ -2,7 +2,7 @@
 
 ## Currenly learning...
 - Linux System & Commands
-    - Packages
+    - Phase 1 Complete
 - Windows
     - Phase 1 Complete 
 - Networking Fundamentals

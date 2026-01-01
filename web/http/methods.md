@@ -45,7 +45,7 @@ This is often blocked or restricted. It is HEAVILY dangerous if exposed without 
 
     {"email":"newemail@example.com"}
 
-    Update user 123 with the new email.
+Update user 123 with the new email.
 
 ### DELETE
 
