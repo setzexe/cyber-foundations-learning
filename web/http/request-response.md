@@ -40,7 +40,7 @@ These are shared by requests and responses. These describe and control behavior,
 - Cookies
 - User-Agent
 
-**Attackers will often modify eaders, inject unexpected values, and abuse trusted headers.**
+**Attackers will often modify headers, inject unexpected values, and abuse trusted headers.**
 
 ## Bodies
 

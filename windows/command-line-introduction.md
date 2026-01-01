@@ -36,7 +36,7 @@ Security favors clarity, percision, and repeatability. The command line allows f
 
 ### File and Directory Interaction
 
-The command line allows you to navigate directories. list files, create and delete files, and inspect paths. Much like what you would see in a Linux terminal.
+The command line allows you to navigate directories, list files, create and delete files, and inspect paths. Much like what you would see in a Linux terminal.
 
 This is crucial for malware analysis, persistence detection and configuration discovery.
 

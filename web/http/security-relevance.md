@@ -6,7 +6,7 @@ It is important to know that HTTPS **does not** remove HTTP risk. It encrypts tr
 
 HTTP attacks with no HTTPS is like shouting your password in a quiet but crowded room.
 
-HTTP attacks with HTTPS is like hand a poisonous apple to a neighbor with a gate around his house. Different ways of attacking, but rely on similar systems.
+HTTP attacks with HTTPS is like handing a poisonous apple to a neighbor with a gate around his house. Different ways of attacking, but rely on similar systems.
 
 ## HTTP as an Attack Surface
 
