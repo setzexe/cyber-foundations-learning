@@ -1,5 +1,7 @@
 # Packets
 
+**This will work as the README as well.**
+
 A packet is a small unit of data sent over a network. Large data like web pages, messages, and files are often sent packet-by-packet and reassembled at the destination. If you want to load google, you're not just being sent google's home page in it's entirety. You get it in packets, which is reassembled before making it viewable to you.
 
 Networks cannot reliably send large amounts of data at once. This is where packets come in. It makes global communication possible with efficient transmission, error handling, and routing across multiple networks. 
