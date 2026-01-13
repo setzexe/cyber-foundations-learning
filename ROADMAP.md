@@ -1,8 +1,7 @@
 # Learning Roadmap
 
 ## Currenly learning...
-- Linux System & Commands
-    - Phase 1 Complete
+- 
 - Windows
     - Phase 1 Complete 
 - Networking Fundamentals
@@ -14,33 +13,81 @@
         - HTML Basics & Understanding
 
 ## Next areas of focus...
-- Introduction to Red Team tools via bash scripting
+- Introduction to Red Team & Blue Team topics & tools
 - Understanding how packets work and travel
-- Implement red/blue team explanations to current documents (Networking)
+- Adding analysis subfolders to current folders
 
 ## Phase 2 Learning
 - Frontend 
-    - JS, HTML, and CSS (Just the basics for CSS)
+    - javascript/
+        - js-basics.md
+        - dom.md
+        - fetch-ajax.md
+        - security-vulns.md
+    - css/
+        - css-basics.md
+        - visual-deception.md
+    - html/
+        - html-basics.md
+        - forms-inputs.md
+        - security-context.md
 - Databases
-    - SQL
-- Windows 
-    - Command Line (beyond the introduction)
-        - PowerShell
+    - intro-databases.md
+    - SQL/
+        - sql-basics.md
+        - queries.md
+        - joins.md
+        - auth-storage.md
+        - sql-injection.md
+        - prevention.md
+- Windows
+    - command-line-powershell/
+        - powershell-basics.md
+        - system-enumeration.md
+        - automation.md
+    - analysis/
+        - process-anomalies.md
+        - service-persistence.md
+        - privilege-context.md
+- Linux
+    - analysis/
+        - writable-paths.md
+        - persistence-locations.md
+        - misconfigurations.md
 - Scripting
-    - Python
-    - More Bash (Maybe Python) Tools
-        - Enumeration
-        - Scanning
-        - Analysis
+    - Python/
+        - python-basics.md
+        - requests.md
+        - parsing.md
+        - tool-markdowns/
+            - enumeration.md
+            - scanning.md
+            - analysis.md
+    - Bash
+        - tools-markdowns/
+            - enumeration.md
+            - scanning.md
+            - analysis.md
+- Networking
+    - analysis/
+        - reading-packets.md
+        - packet-fields.md
+        - common-patterns.md
+- Web
+    - http/
+        - analysis/
+            - malicious-requests.md
+            - auth-flows.md
+            - abuse-patterns.md
 - Red Team
-    - Web Attacks
-    - Network Attacks
-    - Privilege Escalation
+    - web-attacks/
+    - network-attacks/
+    - privilege-escalation/
 - Blue Team
-    - Monitoring
-    - Logging
-    - Hardening
-    - Incident Response
+    - monitoring/
+    - logging/
+    - hardening/
+    - incident-response/
     
 ## Long term goals...
 - Learn enough to create bash scripts, then learn Python scripting

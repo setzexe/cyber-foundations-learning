@@ -2,6 +2,8 @@
 
 IP & MAC addresses are the two primary ways of identifying devices on a network, allowing for communication. While both important, they serve different purposes.
 
+**IP's are a VITAL concept in cybersecurity.**
+
 ---
 
 ## IP (Internet Protocol) Addresses
@@ -17,6 +19,7 @@ Cybersecurity mainly works with IPv4 addresses. These hold 2^32 possible address
 - **Private IP's**: These are used for local networks like a Home WIFI. They can not be directly reached from the internet.
 
 ### NAT (Network Address Translation)
+
 NAT allows multiple private devices on a network to share a single public IP. The router rewrites source IP's into public IP's, and responses are mapped back to each device. Be wary: a misconfigured NAT can expose internal services.
 
 ## MAC (Media Access Control) Addresses
@@ -32,3 +35,4 @@ MAC addresses can be manually changed in software by a process called spoofing. 
 When a device sends data, the IP address determines *where* the data goes. The MAC Address determines *which local device* it goes to.
 
 - ARP (Address Resolution Protocol) maps IP addresses to MAC addresses in a local network.
+
