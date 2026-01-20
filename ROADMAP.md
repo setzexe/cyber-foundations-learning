@@ -1,7 +1,6 @@
 # Learning Roadmap
 
 ## Currenly learning...
-- 
 - Windows
     - Phase 1 Complete 
 - Networking Fundamentals
@@ -13,9 +12,8 @@
         - HTML Basics & Understanding
 
 ## Next areas of focus...
-- Introduction to Red Team & Blue Team topics & tools
-- Understanding how packets work and travel
-- Adding analysis subfolders to current folders
+- Pick up Windows / Linux 
+- Powershell
 
 ## Phase 2 Learning
 - Frontend 
@@ -68,11 +66,6 @@
             - enumeration.md
             - scanning.md
             - analysis.md
-- Networking
-    - analysis/
-        - reading-packets.md
-        - packet-fields.md
-        - common-patterns.md
 - Web
     - http/
         - analysis/
