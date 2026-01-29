@@ -48,3 +48,38 @@ IN (...) is the constraint / filter that is used to check for data within a cert
 
 This selects rows from the table where the data rank is 1, 2, or 3.
 
+## String Constraints
+
+SQL also handles filters / constraints when it comes to strings as well. Not all data you will see will be integers; remember that systems and data like passwords are also being stored in SQL.
+
+### Comparison Operators
+
+"=" or "!=" compare if a string is exactly/not exactly like a wanted bit of data.
+
+"<" or ">" compare if a string is greater/less than a wanted bit of data. For example, APPLE < STORM since S is a highest alphabet letter than A.
+
+### LIKE / NOT LIKE
+
+You would use "=" for exact string comparison. However, LIKE / NOT LIKE allows for some extra filtering. It detects pattern. 
+
+    col_name NOT LIKE "abcd";
+
+This displays any data thats not like abcd. But suppose you wanted to see data that has with abc. There is two ways of doing this.
+
+The first way is " _ ".
+
+    col_name LIKE "abc_";
+
+This shows all data that starts with abc and has one character afterwards. abcd, abcf, and so on. But what if we want more than just four characters, or maybe even characters in front of the "a"? That's where the other method comes in.
+
+The second method is "%data%".
+
+    col_name LIKE "%abc%";
+
+This shows any data that contains abc. babcd, bbwuwioabciwudowi, and so on.
+
+### IN / NOT IN
+
+This is practically the same as the integer constraint. However, this requires quotations for each string.
+
+- col_name NOT IN ("Row A:", "Row B:")
