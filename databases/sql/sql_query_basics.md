@@ -83,3 +83,32 @@ This shows any data that contains abc. babcd, bbwuwioabciwudowi, and so on.
 This is practically the same as the integer constraint. However, this requires quotations for each string.
 
 - col_name NOT IN ("Row A:", "Row B:");
+
+___
+
+## DISTINCT 
+
+You might find situations where theres multiple rows of the same data. John Doe from New York might make multiple orders. You might not wanna see half your data be John's orders. So you use **DISTINCT** to show rows only once.
+
+    SELECT DISTINCT * FROM orders WHERE location = "New York";
+
+This would show data from John once.
+
+## ORDER BY
+
+SQL does not inherently ascend / descend data itself. To do that, we use the ORDER BY clause.
+
+    SELECT DISTINCT * FROM market ORDER BY price ASC/DESC;
+
+You can go ASC or DESC there. 
+
+## LIMIT & OFFSET
+
+Suppose you don't wanna showcase all the data in a table. You may just wanna showcase or a portion or a few rows. Limit & Offset is used for that.
+
+    SELECT * FROM movies WHERE Year > 1980 ORDER BY Year DESC LIMIT 5 OFFSET 5;
+
+This selects data rows 6-10 from the database where movies are newer than 1980. The data descends.
+
+Limit makes it only showcase 5 rows of data. Offset makes it start at 6 instead of 1.
+
