@@ -82,4 +82,4 @@ This shows any data that contains abc. babcd, bbwuwioabciwudowi, and so on.
 
 This is practically the same as the integer constraint. However, this requires quotations for each string.
 
-- col_name NOT IN ("Row A:", "Row B:")
+- col_name NOT IN ("Row A:", "Row B:");
