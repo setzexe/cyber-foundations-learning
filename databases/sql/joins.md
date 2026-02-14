@@ -1,6 +1,6 @@
-# Joins
+# Joins (and Nulls)
 
-This concepts involves understanding that the real world breaks down data into tables through a process called normalization. 
+This concepts involves understanding that the real world breaks down data into tables through a process called normalization. For information about NULLs, scroll to the bottom.
 
 Tables that share information about a single entity need a certain indentifier that let's each table know its referring to that thing alone. This is called a *primary key*. This is a unique identifier for a specific identity. This is often just an incremented number from the previous ID, but it can be anything. Strings, hashes, etc. 
 
@@ -123,6 +123,46 @@ Result:
     NULL     | connor     | NULL
 
 Connor is there, but with no login information. Perhaps connor is a test account. That login_id with 103 though would still be a bit of concern.
+
+___
+
+# Nulls
+
+Nulls signify the absence of a value. Not zero, not false. It just means that **there is literally no data in that value.**
+
+User never logs in = login_time will be NULL.
+Unknown email = email NULL. 
+
+## SQL Behavior
+
+You can NOT compare NULL like a normal value.
+
+    WHERE login_time = NULL
+
+... would not work. You can't compare with an unknown value.
+
+CORRECT (either one):
+
+    WHERE login_time IS NULL
+    WHERE login_TIME IS NOT NULL
+
+NULL also spreads through queries. If you try to do math or operations with a NULL value, the resulting value will just end up being NULL. Seeing this often signals missing relationships or data.
+
+## Cybersecurity Relevance
+
+NULLs can detect suspicious activity in a variety of ways. NULL values, like in the context of login attempts, can show attempts to access something without a proper entry in the system. A NULL user with multiple login attempts could directly mean an authorized user trying to breach.
+
+You will see this alot in:
+
+- Failed logins
+- Missing user data
+- Unlinked records
+- Incomplete logs
+
+NULL often signifies something worth checking out.
+
+
+
 
 
 
