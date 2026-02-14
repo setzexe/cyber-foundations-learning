@@ -23,4 +23,106 @@ The clauses below inner join only apply once data regarding that join has been f
 
 You could technically just use JOIN for these, but by definition this is an inner join.
 
+### Inner Join Example
+
+Table 1: Users
+
+    user_id | username
+    1       | alex
+    2       | ryan
+    3       | connor
+
+Table 2: Logins
+
+    login_id | user_id | login_time
+    101      | 1       | 10:00 AM
+    102      | 2       | 10:05 AM
+    103      | 1       | 11:00 AM
+
+Let's say we only want results where users have actually logged in. Connor should not be on the list.
+
+    SELECT Users.username, logins.login_time
+    FROM Users
+    INNER JOIN Logins
+    ON Users.user_id = Logins.user_id
+
 ## Outer Join 
+
+Sometimes, we want to see beyond just what matches in a database. Perhaps we want to see if there is any missing data.
+
+There are three types of outer joins: LEFT, RIGHT, FULL (These are technically labeled LEFT/RIGHT/FULL OUTER JOINS, but you can just label them without OUTER).
+
+### LEFT JOIN (most important)
+
+This reveals everything from your main table. If a corresponding value in the opposite table has no data, it is filled with NULL. 
+
+Table 1: Users
+
+    user_id | username
+    1       | alex
+    2       | ryan
+    3       | connor
+
+Table 2: Logins
+
+    login_id | user_id | login_time
+    101      | 1       | 10:00 AM
+    102      | 2       | 10:05 AM
+    103      | 1       | 11:00 AM
+
+Note that Connor never logs in. Lets do our SQL query.
+
+    SELECT Users.username, logins.login_time
+    FROM Users
+    LEFT JOIN Logins
+    ON Users.user_id = Logins.user_id
+
+Resulting table:
+
+    username | login_time
+    alex     | 10:00 AM
+    ryan     | 10:05 AM
+    connor   | NULL
+    alex     | 11:00 AM
+
+Connor appears, despite having no login.
+
+### Right Join
+
+This is the same concept, but Table 2 becomes the main table.
+
+    SELECT Logins.login_id, Users.username, logins.login_time
+    FROM Logins
+    RIGHT JOIN Users
+    ON Logins.user_id = Users.user_id
+
+Result:
+
+    login_id | username   | login_time
+    101      | alex       | 10:00 AM
+    102      | ryan       | 10:05 AM
+    103      | NULL       | 11:00 AM
+
+Note the null. In a real system, this means a non-verified user attempted to log in at 11:00 A.M.
+
+### Full Join
+
+This is just a mix of left and right join.
+
+    SELECT Logins.login_id, Users.username, logins.login_time
+    FROM Logins
+    FULL JOIN Users
+    ON Logins.user_id = Users.user_id
+
+Result:
+
+    login_id | username   | login_time
+    101      | alex       | 10:00 AM
+    102      | ryan       | 10:05 AM
+    103      | NULL       | 11:00 AM
+    NULL     | connor     | NULL
+
+Connor is there, but with no login information. Perhaps connor is a test account. That login_id with 103 though would still be a bit of concern.
+
+
+
