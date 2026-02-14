@@ -148,6 +148,11 @@ CORRECT (either one):
 
 NULL also spreads through queries. If you try to do math or operations with a NULL value, the resulting value will just end up being NULL. Seeing this often signals missing relationships or data.
 
+    SELECT * FROM table
+    WHERE column IS/IS NOT NULL
+    AND/OR condition
+    AND/OR condition...
+
 ## Cybersecurity Relevance
 
 NULLs can detect suspicious activity in a variety of ways. NULL values, like in the context of login attempts, can show attempts to access something without a proper entry in the system. A NULL user with multiple login attempts could directly mean an authorized user trying to breach.
@@ -160,6 +165,8 @@ You will see this alot in:
 - Incomplete logs
 
 NULL often signifies something worth checking out.
+
+
 
 
 
