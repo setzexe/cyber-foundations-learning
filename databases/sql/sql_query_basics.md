@@ -111,4 +111,3 @@ Suppose you don't wanna showcase all the data in a table. You may just wanna sho
 This selects data rows 6-10 from the database where movies are newer than 1980. The data descends.
 
 Limit makes it only showcase 5 rows of data. Offset makes it start at 6 instead of 1.
-
