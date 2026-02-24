@@ -41,7 +41,7 @@ This compiles the average amount of orders; 8 / 4 = 2.
     FROM orders;
 
 min_amount = 1. max_amount = 3.
-
+___
 ___
 
 Notice up to this point that these results typically only aggregates into one row. Perhaps we changed the data in the orders table.
@@ -78,12 +78,19 @@ GROUP BY splits a column into groups (based on that column) before it aggregates
 
 SQL does not know which value to display. Jacob could display 3 or 2. Ryan could display 1 or 2. That causes inconsistency.
 
-## Current Format
+Imagine if the orders table had 10000 more orders with 1000 more customers. To have to display every single one would. Fortunately, it's possible to work with these groups much like how WHERE works.
 
-    SELECT col 
-    FROM tables 
-    WHERE condition
-    GROUP BY col
+    SELECT customer, SUM(amount) AS total_amount FROM orders
+    GROUP BY customer
+    HAVING SUM(amount) > 4
+
+Only Jacob would display. 
+
+The reason you could not just do..
+
+    ... WHERE SUM(amount) > 4
+
+is because WHERE runs before grouping amount. SUM(amount) does not exist at that point.
 
 ## Cybersecurity Relevance
 
