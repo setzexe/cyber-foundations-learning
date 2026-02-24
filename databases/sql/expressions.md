@@ -86,3 +86,5 @@ You can use multiple to display multiple results.
     SELECT price * quantity AS total_value,
         ROUND(price * 0.07, 2) AS tax
     FROM orders;
+
+The shows the total_value of the items in the table + the tax.
