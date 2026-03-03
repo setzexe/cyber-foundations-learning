@@ -6,7 +6,7 @@ With all the clauses and constraints described in the other markdowns, it would 
 
 With every applied principle, to make SQL pull the data correctly, this format is followed:
 
-    SELECT DISTINCT column, AGG_FUNC(column)...
+    SELECT DISTINCT column, AGG_FUNC(column)... AS alias
     FROM table
     JOIN table2
         ON table.id = table2.id
@@ -19,3 +19,4 @@ With every applied principle, to make SQL pull the data correctly, this format i
 This is how queries are formatted. SELECT is first, and OFFSET is last. But this is not how the actual process works. SQL itself does not "select" first.
 
 ## Query Execution Order
+
