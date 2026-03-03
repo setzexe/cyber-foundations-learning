@@ -18,5 +18,29 @@ With every applied principle, to make SQL pull the data correctly, this format i
 
 This is how queries are formatted. SELECT is first, and OFFSET is last. But this is not how the actual process works. SQL itself does not "select" first.
 
+Each query begins with finding the data we actually need in a database, and then filtering that data down into something that can be processed and understood easily by us. 
+
 ## Query Execution Order
+
+1. FROM / JOIN
+
+The **FROM** clause (and **JOINS**, as they also look at data *from* a table) are the first clauses to be executed. This tells SQL exactly what data is being worked with.
+
+2. WHERE
+
+Once we have the total working set of data we want to work with, the **WHERE** constraint are applied to each row. If a row does not satisfy the WHERE clause, it is discarded. Only data requested in the **FROM** clause is affected by this (since this is the only required data anyways).
+
+3. GROUP BY
+
+The remaining rows that passed the **WHERE** constraint are then grouped based on common values in the column speciified by **GROUP BY**. This is only really used when there are aggregate functions within the query.
+
+4. HAVING
+
+If the query has a **GROUP BY** clause, then the constraints in the **HAVING** clause are then applied to these rows. Like **WHERE**, rows that do not satisy these requests are discarded.
+
+5. SELECT / aliases
+
+Any expressions within **SELECT** are now finally computed. The alias is handled here too. SQL does not care for aliases much though, as it is more for display / formatting.
+
+
 
