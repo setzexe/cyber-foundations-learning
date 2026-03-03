@@ -42,5 +42,24 @@ If the query has a **GROUP BY** clause, then the constraints in the **HAVING** c
 
 Any expressions within **SELECT** are now finally computed. The alias is handled here too. SQL does not care for aliases much though, as it is more for display / formatting.
 
+6. DISTINCT
+
+After **SELECT**, **DINSTINCT** computes. Any duplicate values in the DISTINCT column will be discarded.
+
+7. ORDER BY 
+
+If an order is specified by the **ORDER BY** clause, the rows are sorted by the data in rather ascending or descending order (depending on what the user queries).
+
+8. LIMIT / OFFSET
+
+The last step of the process is computing the **LIMIT** followed by the **OFFSET** clause. LIMIT limits how many rows we see, with OFFSET offsetting the amount of rows we see.
+
+___
+
+Not every query needs to have every clause you see here. But a reason as to what makes SQL such a standard is the fact that these clauses exist. It allows for ease of use and very efficient ways off pulling data.
+
+
+
+
 
 
