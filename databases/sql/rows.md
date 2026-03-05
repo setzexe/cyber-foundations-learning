@@ -26,7 +26,38 @@ You can also insert multiple rows at once. The column omitting rule still applie
         (2, "iPad", 999.99),
         (3, "Airpods Gen 2", 199.99);
 
-    
+## Updating Rows
+
+If, for whatever reason, you mean to edit already existing data, the **UPDATE** clause works for this.
+
+The process of updating values / a row is identifying the tables, setting values, then specifying what rows will be updated. For example:
+
+    UPDATE Products
+    SET Price = 999.99
+    WHERE ProductID = 1;
+
+The MacBook will now be $999.99 according to the database.
+
+You can also update multiple fields / columns at once by seperating them with a column.
+
+    UPDATE Products
+    SET Name = "NEW MacBook", Price = 1499.99
+    WHERE ProductID = 1;
+
+If the where clause matches more than one row (maybe we did WHERE Category = "Electronics"), the UPDATE query will update ALL rows in that clause. All "Electronics" rows would get this update.
+
+**You must use the WHERE clause if you want to only affect certain rows.** Using the UPDATE query without WHERE applies the update to EVERY SINGLE row in a table.
+
+    UPDATE Products
+    SET Price = "99.99";
+
+Now everything in the store is $99.99!
+
+Before running an UPDATE query, it is highly recommended that you do the same query, but with SELECT.
+
+    SELECT * FROM Products WHERE Category = "Electronics"
+
+This shows you have many rows will actually be affected.
 
 
 
