@@ -12,7 +12,7 @@ The main components you want to include in a schema are:
     - The main storage containers. These contain the data itself.
 - Fields (Columns)
     - Fields, or columns, are the specific types of data you would put in a table. Email, name, order_date, etc. 
-- Data Typest
+- Data Typeset
     - Rules on what type of data can go where. **INT** for numbers, **VARCHAR** for text, DATE for dates. A name should only be VARCHAR, and id's should usually just be an INT.
 - Relationships
     - How tables connect. The SELECT query uses **JOIN** for this. This is usually done through *Primary Keys* (unique ID) and *Foreign Keys* (linking to another table)
