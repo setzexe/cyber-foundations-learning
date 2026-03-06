@@ -59,5 +59,7 @@ Before running an UPDATE query, it is highly recommended that you do the same qu
 
 This shows you have many rows will actually be affected.
 
+## Deleting Rows
 
+Deleting rows in SQL removes unwanted data form database tables using the **DELETE** statement. It is paired with the **WHERE** clause.
 
