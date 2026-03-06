@@ -63,3 +63,57 @@ This shows you have many rows will actually be affected.
 
 Deleting rows in SQL removes unwanted data form database tables using the **DELETE** statement. It is paired with the **WHERE** clause.
 
+    DELETE FROM table
+    WHERE condition;
+
+Suppose we have a new table for student information for a school.
+
+    Students
+    student_id | student_name | other_columns...
+
+This might have 1800. If you wanted to delete a specific row, possibly because a student graduated or moved (we'll say user 80 in this case) the process would look like this:
+
+    DELETE FROM Students
+    WHERE student_id = 80;
+
+Only row 80 will be deleted. You don't have to do this again for every column in that row. Once you have one value, the rest of the row is deleted.
+
+You can also search multiple rows using **in**:
+
+    DELETE FROM Students
+    WHERE student_id IN (80, 81, 82);
+
+To delete based on text:
+
+    DELETE FROM Students
+    WHERE student_name = 'Ryan';
+
+You can also delete based on numeric conditions.
+
+    DELETE FROM Students
+    WHERE student_id < 11 
+
+Students 1-10 will be deleted. 
+
+Much like updating tables, it is recommended to do a SELECT * FROM query before deleting anything. This verifies that you know exactly what you want deleted.
+
+    SELECT * FROM Students WHERE student_id = 80;
+
+**ALWAYS include a where clause** Even if the condition might be silly. If you do not, **ALL data** gets deleted. You could potentially destroy an entire table's data with a simple mistake. **HAVE BACKUPS OF THESE TABLES!!!**
+
+## Trunicate & Drop
+
+It's worth mentioning that there is a specific command for deleting everything intentionally instead of just misusing DELETE:
+
+    TRUNICATE TABLE Students;
+
+This near instantly deletes all data in the table. This is really only what it's used for.
+
+**DROP** does the entire table. Not the data-- the ENTIRE table. 'Students' wouldn't even exist in the database anymore.
+
+If your table works as a foreign key for another table, you CANNOT delete or trunicate the table. It would not allow you.
+
+
+
+
+
