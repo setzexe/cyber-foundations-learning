@@ -41,5 +41,3 @@ This script exists to make accessing this repo easier. Much like above, you will
     source ~/.bashrc
 
 This opens VSC (or whatever IDE is compatible with *code .*) and this repo.
-
-## Desktop Shortcut
