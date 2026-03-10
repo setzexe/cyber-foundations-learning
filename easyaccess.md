@@ -29,4 +29,4 @@ If you would like to make this an easy alias that you can use in any subfolder (
 
 Now, from anywhere, you can go:
 
-    commit "your message here"
+    commit "your message here" DEEZ NUTS
