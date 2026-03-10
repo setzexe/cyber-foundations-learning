@@ -4,6 +4,8 @@ For general ease of use for this repo when it comes to things like committing ch
 
 This helped the problem of continuously doing the same lines of text for repeating tasks like committing changes or opening my IDE. 
 
+## Accessing the IDE + Repo
+
 ## Committing
 
     commit.sh
@@ -29,4 +31,4 @@ If you would like to make this an easy alias that you can use in any subfolder (
 
 Now, from anywhere, you can go:
 
-    commit "your message here" DEEZ NUTS
+    commit "your message here"
