@@ -1,6 +1,31 @@
 # Tables & Constraints 
 
-Tables are the fundamental part of databases that actual store data. They consist of rows and columns and store data based on constraints. Everyday systems heavily rely on these tables. The passwords you have on websites exist within a table.
+Tables are the fundamental part of databases that actual store data. They consist of rows and columns and store data based on constraints. Everyday systems heavily rely on these tables. The passwords you have on websites exist within a table. Very similar to a spreadsheet.
 
 The structure of a table is defined by it's **schema**. Each column has a name, a data type that's allowed, an optional constraint, and an optional default value. This structure ensures tables have variety and are not just clumps of data.
+
+## Table Creation Example
+
+Below would be the creation of a table for **students** in a school system:
+
+    CREATE TABLE Students (
+        StudentID INT PRIMARY KEY,
+        First_Name VARCHAR(100),
+        Last_Name VARCHAR(100),
+        Grade INT,
+        GPA DECIMAL(3, 2),
+        Enrolled DATE
+    );
+
+The table holds 6 columns, with StudentID being the primary key. Among these 6 columns, there are:
+- 4 different data types
+    - INT
+    - VARCHAR(100) 
+    - DECIMAL(3, 2)
+    - DATE
+- 1 constraint
+    - PRIMARY KEY
+
+More information on these will be below. But generally, this table creates rows of data containing grade/gpa, name, and enrollment date. A unique integer is used as the identifier for each student.
+
 
