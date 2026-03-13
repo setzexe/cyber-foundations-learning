@@ -1,0 +1,6 @@
+# Tables & Constraints 
+
+Tables are the fundamental part of databases that actual store data. They consist of rows and columns and store data based on constraints. Everyday systems heavily rely on these tables. The passwords you have on websites exist within a table.
+
+The structure of a table is defined by it's **schema**. Each column has a name, a data type that's allowed, an optional constraint, and an optional default value. This structure ensures tables have variety and are not just clumps of data.
+
