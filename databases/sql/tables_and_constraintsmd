@@ -28,4 +28,58 @@ The table holds 6 columns, with StudentID being the primary key. Among these 6 c
 
 More information on these will be below. But generally, this table creates rows of data containing grade/gpa, name, and enrollment date. A unique integer is used as the identifier for each student.
 
+## Data Types
+
+Different tables and columns will use and handle different data types.
+
+### Numbers
+
+**INT**: Whole number. No decimals.
+
+**BOOLEAN**: True/False.
+
+    age INT,
+    enrolled BOOLEAN
+
+### Decimals
+
+**FLOAT** / **DOUBLE**: Numbers with decimals (4.5, 99.99, 100.99182382)
+
+**DECIMAL(T, D)**: Number with a set decimal. T represents how many total digits. D represents how many will be behind the decimal. 
+
+    income FLOAT,
+    gpa DECIMAL(3, 2)
+
+gpa would be 0.00 - 9.99.
+
+### Text / Words
+
+**CHAR(n)**: Fixed text length. CHAR(2) = the inserted data MUST be 2 letters.
+
+**VARCHAR(n)**: Variable text length. (n) is a max letters. If VARCHAR(20), the data can be 1-20 letters long but none more.
+
+**TEXT**: No limit. Used for long paragraphs.
+
+    age CHAR(2),
+    username VARCHAR(50),
+    description TEXT
+
+### Time & Dates
+
+**DATE**: Just the day (YYYY-MM-DD).
+
+**DATETIME**: The day + the exact time down to the second.
+
+    creation_date DATE,
+    last_updated DATETIME
+
+### BLOB
+
+**BLOB**: Binary Large Object. This is the actual file data, like image or video data itself. Not something used for like typical "data".
+
+    image_file BLOB
+
+___
+
+## Constraints
 
