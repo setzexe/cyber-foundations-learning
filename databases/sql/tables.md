@@ -28,3 +28,34 @@ The table holds 6 columns, with StudentID being the primary key. Among these 6 c
 
 More information on these will be below. But generally, this table creates rows of data containing grade/gpa, name, and enrollment date. A unique integer is used as the identifier for each student.
 
+## Adding Columns
+
+You need to specify the datatype and the (optional) constraint when adding a column. The syntax is simular to creating rows.
+
+    ALTER TABLE table
+    ADD column DataType OptionalConstraint
+        DEFAULT DefaultValue
+
+## Removing Columns
+
+This feature is very straight forward.
+
+    ALTER TABLE table
+    DROP column
+
+**Do note that some databases do not do this, like SQLlite.** You would have to just make a new table.
+
+## Renaming Tables
+
+This is also very straight forward.
+
+    ALTER TABLE table
+    RENAME TO NewTable
+
+## Dropping Tables
+
+**DELETE** was mentioned before, which removes a tables schema from a database entirely. But this might not delete data or metadata. This is where **DROP TABLE IF EXISTS** comes in.
+
+    DROP TABLE IF EXISTS table;
+
+Much like **DELETE**'s and whatnot, a table won't be deleted if that table serves as a primary key to other tables.
