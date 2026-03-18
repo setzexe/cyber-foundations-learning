@@ -10,7 +10,45 @@ DHCP works similar to a hotel's front desk.
 
 DHCP hear works as the front desk before you can actually utilize the hotel.
 
+When a device wants to access a network, it needs configuration (IP address, gateway, etc) so that it can be differentiated and acknowledged. Without it, users might need to manually do this. It also might cause two devices to have to same IP, which could be catastrophic. DHCP naturally avoid this and makes network accessibility very easy.
+
 ## The DHCP Process (DORA)
 
 There are four steps in the DHCP process. They follow the acronym **DORA**.
+
+### Discover
+
+Your device first broadcasts a message (to everyone on a network) looking for an IP address. It intently searches for a DHCP server.
+
+### Offer
+
+The DHCP offers available IP addresses, as well as their lease time & network settings.
+
+### Request
+
+Your device requests one of these IPs.
+
+### Acknowledge (ACK)
+
+The DHCP server confirms that you have officially joined the network.
+
+## What DHCP gives you
+
+When the DORA process is finished, your device now has:
+
+- IP Address (your identity on the network)
+- Subnet Mask (defines your local network)
+- Default Gateway (your internet exit)
+- DNS Server (how you turn domains into IP's)
+
+## Lease Time
+
+DHCP leases are not forever. IP's are leased at limited times set by the server.
+
+Halfway through, your device asks if it can keep using the IP. Usually, this is the case and you keep the IP. Otherwise, you get a new IP.
+
+# Cybersecurity Relevance
+
+
+
 
