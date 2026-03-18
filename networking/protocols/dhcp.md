@@ -49,6 +49,23 @@ Halfway through, your device asks if it can keep using the IP. Usually, this is 
 
 # Cybersecurity Relevance
 
+Dynamic Host Control Protocol has many exploits.
+
+## Fake DHCP server 
+
+On a public network, an attacker can set up a fake DHCP server. This means that any devices trying to access the network might access this instead of a legit one.
+
+Unsuspecting devices might be given a faulty IP, DNS, gateway, and so on. These can be used maliciously to redirect websites, monitor traffic, read credentials, etc.
+
+Sometime's this is done after a **DHCP DoS Attack**.
+
+## DHCP DoS Attack
+
+Attackers flood HDCP with fake requests. This consumes all available IPs, leaving no proper ones for regular users to use. 
+
+As mentioned earlier, this can be paired with a fake DHCP server. Since other devices won't be able to discover the proper DHCP server, it goes to a malicious one.
+
+It is worth noting that **it is possible for a network to only allow authorized DHCP networks.**
 
 
 
