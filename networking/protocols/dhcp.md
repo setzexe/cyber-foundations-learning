@@ -8,6 +8,8 @@ DHCP works similar to a hotel's front desk.
 - You ask for a room (request network access)
 - The front desk gives you your room key + directions + services (IP address + gateway + DNS)
 
+DHCP hear works as the front desk before you can actually utilize the hotel.
+
 ## The DHCP Process (DORA)
 
 There are four steps in the DHCP process. They follow the acronym **DORA**.
