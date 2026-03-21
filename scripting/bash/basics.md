@@ -23,6 +23,40 @@ Once permissions are set, you can run the script by:
 
 - ./exampleScript.sh
 
+## Output
+
+Bash uses two different method's for output: **echo** and **printf**. Both do the same thing: create output. But they're used in different contexts.
+
+### echo
+
+**echo** is for quick, simple output. It is very simple and very fast to type with. This is used in quick, individual scripts.
+
+    echo "Hello, World!"
+
+...just prints "Hello, World!" with a new line after.
+
+It is not recommended to use echo for bigger projects as it's behavior across different shells varies. The simple output principle is the same universally, but stuff like newlines or methods (-e, -n) might be different.
+
+### printf
+
+**printf** is for more consistent, percise output.
+
+
+    printf "Hello, World!\n"
+    name="Ryan"
+    printf "Hello, %s\n" "$name"
+
+This prints: Hello, World! (new line) Hello, Ryan
+
+Note that variables are formatted before being specified.
+
+- %s --> string
+- %d --> integer
+- %f --> float
+- %n --> newline
+
+This is preferred in larger scale projects as it in consistent across shells.
+
 ## Variables
 
 Variables store data for reuse. They can store arguments as well.
@@ -64,6 +98,7 @@ result=S(whoami)
 echo $result
 
 (In the text above, S's should be $'s. Having them in the markdown messed up formatting.)
+
 ## Arrays
 
 Arrays store multiple values.
