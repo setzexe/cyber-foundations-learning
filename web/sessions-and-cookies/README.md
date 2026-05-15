@@ -6,11 +6,9 @@ In cybersecurity, these are a critical attack surface. Misconfigured cookies can
 
 ## Cookies
 
-Cookies are small files that are stored on the client (browser) and sent with every HTTP request to a specific domain. These help the server know about prior important client information, like passwords or even ad traffic. Servers use *set-cookie* headers to assign them
+Cookies are small files that are stored on the client (browser) and sent with every HTTP request to a specific domain. These help the server know about prior important client information, like passwords or even ad traffic. Servers use *set-cookie* headers to assign them.
 
 ### Cookie Strutucre
-
-DO STUFF HERE
 
 - Name = The identifier
 - Value = Data
