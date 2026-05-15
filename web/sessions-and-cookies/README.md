@@ -35,3 +35,35 @@ DO STUFF HERE
 - These are also what gives you personalized ads.
 
 ## Sessions
+
+A session is a server-side state tied to a client. It works directly with cookies to keep you logged in. The server will create a unique "Session ID" that is sent to your browser. This session ID is stored as a cookie. On subsequent requests, the client sends the session ID, and the server retrieves the associated data.
+
+### Session Flow
+
+- Client logs in, or session creation is triggered
+- Server creates session ID and stores session data
+- Server sends session ID to client (via Set-Cookie header)
+- Client includes this session ID in future requests
+- Server validates ID & retrieves session data
+
+### Common Vulnerabilities
+
+- Session Fixation
+    - Attackers force a known session ID onto a victim. If a victim uses this, attackers can exploit any access that the victim has.
+- Session Hijacking
+    - Attackers can steal a valid session ID (XSS, sniffing, etc) and impersonate the victim.
+- Weak Session ID's
+    - Predictable / short ID's = brute force more possible.
+- Cookie Theft
+    - XSS injection, malware / malicious scripts, man-in-the-middle attacks, etc.
+- CSRF
+    - Attacker tricks a victim into making a request that modify's the server state via a victim's valid session.
+- Missing HttpOnly / Secure flags 
+    - Makes cookies vulnerable to network interception or XSS via JavaScript.
+
+## Differences Between Cookies & Sessions
+
+Cookies are stored via the client-side, store a limited amount of data (4KB usually) and can persist for a long time.
+
+Sessions are server-side and usually end when the browser is closed. Due to this, and the fact that information is stored via server security, the information is a lot less at risk.
+
