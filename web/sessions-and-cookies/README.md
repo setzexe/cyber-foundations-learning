@@ -24,5 +24,17 @@ DO STUFF HERE
     - LAX - The default. This allows cookies to be sent if the user clicks a link. Only GETS are sent, POST are not.
     - None - All cookies are sent. This includes POSTS like payment information, which makes it risky. To allow this, cookies MUST be sent via HTTPS.
 
+### Key Security Attributes
+
+- The HttpOnly flag prevents JavaScript from reading cookies. This blocks XSS / injection based session theft. 
+- Secure cookies travel only through HTTPS. Note that HTTPS is usually the web default.
+
+### Other notes
+
+- These are the reason you often do not need to log in to a site everytime; the cookie remembers. Same with internet shopping carts.
+- These are also what gives you personalized ads.
+
+## Sessions
+
 
     
