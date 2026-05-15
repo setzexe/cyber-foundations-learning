@@ -35,8 +35,3 @@ DO STUFF HERE
 - These are also what gives you personalized ads.
 
 ## Sessions
-
-
-    
-
-d
